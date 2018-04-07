@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+
+
+<title>Crystal Collectors</title>
+
+</head>
+<body>
+    
+<!--Add header-->  
+    <h1>Crystals Collector</h1>
+    <!--Add container-->
+        <div id="container">
+        <!--Add rules of play-->
+            <ul>How to play</ul>
+                <li>You will be given a random number at the start of the game</li>
+                <li>There are four cyrstals below.  By clicking on a crystal you will add a specific number of points to your score.</li>
+                <li>You win the game by matching your score to the random number</li>
+                <li>You lose the game if your total score goes above the random number</li>
+                <li>The value of each crystal is hidden from you until you click on it</li>
+                <li>The value of the crystals change at the start of each new game</li>
+            </ul>
+            <div id="random"></div>
+        <!--Add Wins/Losses Tallies-->
+            <div class="tally">
+                <p id = "win" >Wins: </p>
+                <p id = "loss">Losses: </p>
+            </div>
+            <!--Add crystal buttons-->
+                <button class="crystal">Crystal1</button>  
+                <button class="crystal">Crystal2</button>   
+                <button class="crystal">Crystal3</button> 
+                <button class="crystal">Crystal4</button> 
+                <!--Add total score-->
+                    <h4>Your total score</h4>
+                    <!--Add div for current score-->
+                        <div id="currentScore"></div>
+        </div>
+
+ 
+
+    
+</body>
+</html>

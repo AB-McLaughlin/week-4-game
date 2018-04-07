@@ -14,6 +14,10 @@ var cryTwo = 0;
 var cryThree = 0;
 var cryFour = 0;
 
+//define min/max
+var min1 = 1;
+var max1 = 12;
+
 //Hold cry# to add to current score
 var currentScore = 0 + cryOne;
 
@@ -27,34 +31,34 @@ $(document).ready(function(){
 function getRandomIntInclusive(min, max) {
   compRandom = Math.floor(Math.random() * (max - min + 1)) + min;
   $("#random").text(compRandom);
-   }
+}
 
   getRandomIntInclusive(19,120);
 
 //Generate crystal1 value random integer between 1 and 12, inclusive
-  $("#crystal1").click (function cryVal1(min, max) {
-  cryOne = Math.floor(Math.random() * (max - min + 1)) + min;
+  $("#crystal1").click (function() {
+  cryOne = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
     
     console.log(cryOne);
   })
 
 //Generate crystal2 value random integer between 1 and 12, inclusive
-  $("#crystal2").click (function cryVal2(min, max) {
-  cryTwo = Math.floor(Math.random() * (max - min + 1)) + 1;
+  $("#crystal2").click (function() {
+  cryTwo = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
    
   console.log(cryTwo);
   })
 
 //Generate crystal3 value random integer between 1 and 12, inclusive
-  $("#crystal3").click (function cryVal3(min, max) {
-  cryThree = Math.floor(Math.random() * (max - min + 1)) + 1;
+  $("#crystal3").click (function() {
+  cryThree = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
  
   console.log(cryThree);
   })
 
 //Generate crystal4 value random integer between 1 and 12, inclusive
-  $("#crystal4").click (function cryVal4(min, max) {
-  cryFour = Math.floor(Math.random() * (max - min + 1)) + 1;
+  $("#crystal4").click (function() {
+  cryFour = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
   
   console.log(cryFour);
   })

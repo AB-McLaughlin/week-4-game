@@ -15,7 +15,7 @@ var cryThree = 0;
 var cryFour = 0;
 
 //Hold cry# to add to current score
-var currentScore = 0 + crystal;
+var currentScore = 0 + cryOne;
 
 //randomly generated integer for comparison
 var compRandom = 0;
@@ -27,25 +27,57 @@ $(document).ready(function(){
 function getRandomIntInclusive(min, max) {
   compRandom = Math.floor(Math.random() * (max - min + 1)) + min;
   $("#random").text(compRandom);
-  
-}
-//Generate crystal value random integer between 1 and 12, inclusive
-$(".crystal").click (function cryVal(min, max) {
-    Math.floor(Math.random() * (max - min + 1)) + 1;
-    currentScore += cryVal;
-})
+   }
 
-$("#crystal").on("click", function (){
-  currentScore += crystal;
+  getRandomIntInclusive(19,120);
+
+//Generate crystal1 value random integer between 1 and 12, inclusive
+  $("#crystal1").click (function cryVal1(min, max) {
+  cryOne = Math.floor(Math.random() * (max - min + 1)) + min;
+    
+    console.log(cryOne);
+  })
+
+//Generate crystal2 value random integer between 1 and 12, inclusive
+  $("#crystal2").click (function cryVal2(min, max) {
+  cryTwo = Math.floor(Math.random() * (max - min + 1)) + 1;
+   
+  console.log(cryTwo);
+  })
+
+//Generate crystal3 value random integer between 1 and 12, inclusive
+  $("#crystal3").click (function cryVal3(min, max) {
+  cryThree = Math.floor(Math.random() * (max - min + 1)) + 1;
+ 
+  console.log(cryThree);
+  })
+
+//Generate crystal4 value random integer between 1 and 12, inclusive
+  $("#crystal4").click (function cryVal4(min, max) {
+  cryFour = Math.floor(Math.random() * (max - min + 1)) + 1;
+  
+  console.log(cryFour);
+  })
+
+//When a crystal button is clicked, add the crystal value to the currentScore
+  //If currentScore is larger than the randomNumber, its a loss
+  //If currentScore is equal to randomNumber, its a win
+$("#crystal").on("click"), function (){
+  currentScore += cryOne;
+  $("#currentScore").text(currentScore);
+  
   if (currentScore > randomNumber) {
-    losses++
-  }
-})
+    losses++;
+  
+  } else (currentScore = randomNumber) ;{
+    wins++;
+  }    
+}
     
 
 //Update wins on HTML
 function updateWins() {
-    document.querySelector("#win").innerHTML = "Wins: " + wins;
+    $("#win").html = "Wins: " + wins;
     $("button").click(function(){
       $("div").empty();
   });
@@ -55,11 +87,13 @@ function updateWins() {
     cryThree = 0;
     cryFour = 0;
     currentScore =0;
-  }
-
+    
 //Update losses on HTML
   function updateLosses() {
-    document.querySelector("#loss").innerHTML = "Losses: " + losses;
+    $("#loss").html = "Losses: " + losses;
+    $("button").click(function(){
+      $("div").empty();
+    });
     randomNumber = 0;
     cryOne = 0;
     cryTwo = 0;
@@ -68,13 +102,18 @@ function updateWins() {
     currentScore =0;
   }
 
-  
+  //Call functions
+
+
+  cryVal1(1, 12);
+  cryVal2(1, 12);
+  cryVal3(1, 12);
+  cryVal4(1, 12);
 
  
-//Call functions
-
-    getRandomIntInclusive(19,120);
 
   
 
-})
+  
+
+}})
